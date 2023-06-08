@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!--==========-->
+	<head>
+		<!--=====* Template Name: Day - v4.10.0	* Template URL: https://bootstrapmade.com/day-multipurpose-html-template-for-free/ * Author: BootstrapMade.com	* License: https://bootstrapmade.com/license/=====-->
+		<!--=====Meta Config.=====-->
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta content="" name="description">
+		<meta content="" name="keywords">
+		<!--=====End Meta Config.=====-->
+		<!--=====Title Tab=====-->
+		<title>Grupo Roveri</title>
+		<!--=====End Title Tab=====-->
+		<!--=====Boxicons=====-->
+		<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+		<!--=====End Boxicons=====-->
+		<!--=====CSS Import Files=====-->
+		<link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<!--=====End CSS Import Files=====-->
+		<style>
+		body {
+			/*font*/
+			font-family: "Open Sans", sans-serif;
+			/*display*/
+			background: #0D0D0D;
+		}
+		section {
+			overflow: hidden;
+		}
+		/*=====General=====*/
+		/*=====Cabeçalho e Barra de Navegação=====*/
+		#cabecalho {
+			/*display*/
+			display: flex;
+			position: fixed;
+			width: 100%;
+			height: 70px;
+			align-items: center;
+			justify-content: center;
+			transition: all 0.3s;
+			z-index: 1000;
+		}
+		.cabecalho {
+			/*display*/
+			display: flex;
+			margin: 10px;
+			padding: 0;
+			align-items: center;
+			justify-content: space-between;
+		}
+		.img-logo {
+			/*display*/
+			max-height: 50px;
+		}
+		.lista {
+			/*font*/
+			list-style: none;
+			/*display*/
+			display: flex;
+			margin: 0;
+			padding: 0;
+		}
+		.lista li a{
+			/*font*/
+			text-decoration: none;
+			font-weight: 50px;
+			font-size: 14px;
+			color: #ffffff;
+			/*display*/
+			padding: 10px;
+		}
+		.lista a:hover, .lista .active, .lista .active:focus, .lista li:hover>a {
+			/*font*/
+			color: rgba(255, 255, 255, 0.6);
+		}
+		.lista li ul{
+			/*font*/
+			text-align: right;
+			/*display*/
+			display: none;
+			position:absolute;
+			width: 200px;
+			height: 150px;
+			top: 40px;
+			right: 18%;
+			padding: 20px;
+			background: #EABA34;
+			/*border*/
+			border-top: 5px solid #ffffff;
+			border-top-left-radius: 100%;
+			border-bottom-left-radius: 10px;
+		}
+		.lista li:hover ul, .lista li.over ul{
+			/*font*/
+			list-style-type: none;
+			/*display*/
+			display:block;
+			margin: 10px 0;
+		}
+		/*=====Cabeçalho e Barra de Navegação=====*/
+		</style>
+	</head>
+<!--==========-->
+	<body>
+		<!--=====Cabeçalho=====-->
+		<header id="cabecalho" class="cabecalho-scroll">
+			<nav class="cabecalho container">
+				<a href=""><img class="img-logo" src="./images/logo.png" alt="Logo Grupo Roveri"></a>
+					<ul class="lista">
+						<li><a href="#hero"><i class='bx bxs-home-alt-2'></i></a></li>
+						<li><a href="#">Sobre Nós</a></li>
+						<li><a href="#sociais">Fale Conosco</a></li>
+					</ul>
+				</nav>
+		</header>
+		<!--=====End Cabeçalho=====-->
+		<section id="informations" class="informations">
+		<br><br>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
+					<h3 class="informations-title">Quais informações coletamos?</h3>
+					<br>
+					<p class="informations-text">Para prestar-lhe os Serviços, temos que coletar Informações Pessoais relativas
+						a uma pessoa física identificada ou identificável (“Informações Pessoais”). Coletamos Informações Pessoais
+						que você nos envia, do seu uso dos Serviços e de outras fontes. Aqui estão alguns tipos de Informações
+						Pessoais que coletamos sobre você:</p>
+					<br>
+					<p class="informations-text">Informações que você nos envia: quando se registra nos nossos Serviços, compra
+						e/ou registra nomes de domínios, usa qualquer dos nossos Serviços e/ou quando entra em contato conosco
+						diretamente por qualquer canal de comunicação (como e-mails, agendamento de teleconferência, ou
+						preenchimento de formulário), você poderá nos enviar Informações Pessoais como nome, endereço de e-mail,
+						número de telefone, Informações Pessoais de pagamento, Informações Pessoais que incluir nas suas
+						comunicações conosco e Informações Pessoais contidas em documentos de identificação escaneados (como uma
+						cédula de identidade, carteira de habilitação ou documentos oficiais de registro de empresas).</p>
+					<br>
+					<p class="informations-text">Informações que coletamos quando você usa os Serviços: Quando você visita, faz
+						downloads e/ou usa qualquer dos nossos Serviços, podemos coletar Informações Pessoais de uso agregado como
+						a atividade de navegação e transmissão rápida de Visitantes e Usuários nos Serviços, mapas de calor e
+						rolagens de sessões, Informações Pessoais não identificadoras relativas ao dispositivo do Visitante ou do
+						Usuário, sistema operacional, navegador da internet, resolução da tela, idioma e configurações do teclado,
+						provedor de serviços de internet, páginas encaminhadoras/de saída, marcações de data/tempo etc.</p>
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--=====End Informations Section=====-->
+	<!--=====Finalidade das Informações Coletadas=====-->
+	<section id="finalidadeinformacoes" class="finalidadeinformacoes">
+		<br><br>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-6 footer-links">
+					<h3 class="finalidadeinformacoes-title">Finalidade das Informações Coletadas</h3>
+					<br>
+					<ul class="finalidadeinformacoes-text">
+						<li>Prestar e operar os Serviços;</li>
+						<br>
+						<li>Desenvolver, customizar, expandir e melhorar ainda mais os nossos Serviços com base nas preferências,
+							experiências e dificuldades comuns ou pessoais dos Usuários;</li>
+						<br>
+						<li>Proporcionar aos nossos Usuários atendimento ao cliente e suporte técnico contínuos;</li>
+						<br>
+						<li>Conseguir entrar em contato com os nossos Usuários por meio de notificações e mensagens promocionais
+							gerais ou personalizadas relativas aos serviços;</li>
+						<br>
+						<li>Ajudar-nos a atualizar, expandir e analisar os nossos registros para identificar novos clientes</li>
+						<br>
+						<li>Facilitar, patrocinar e oferecer certos conteúdos, eventos e promoções, determinar a elegibilidade de
+							participantes, monitorar o desempenho, contatar ganhadores e conceder prêmios e benefícios;</li>
+						<br>
+						<li>Agregados e outras Informações Pessoais agregadas e/ou inferidas que nós ou os nossos parceiros de
+							negócios poderão usar para prestar e melhorar os nossos respectivos serviços;</li>
+						<br>
+						<li>Prestar-lhe assistência profissional, somente por sua solicitação;</li>
+						<br>
+						<li>Aprimorar a nossa segurança de dados e capacidades de prevenção de fraudes;</li>
+						<br>
+						<li>Cumprir as leis e os regulamentos aplicáveis.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+		<!--=====End Script Import File=====-->
+		<script>
+			function scrollBanner() {
+			  var scrollPos
+			  var headerText = document.querySelector('.cabecalho-scroll')
+			  scrollPos = window.scrollY
+			  if (scrollPos <= 600) {
+			    headerText.style.transform = 'translateY(' + -scrollPos / 3 + 'px' + ')'
+			    headerText.style.opacity = 1 - scrollPos / 600
+			  }
+			}
+			window.addEventListener('scroll', scrollBanner)
+		</script>
+		<!--=====End Script Import File=====-->
+	</body>
+<!--==========-->
+</html>

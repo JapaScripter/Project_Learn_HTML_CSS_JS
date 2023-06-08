@@ -1,0 +1,493 @@
+<!-- https://www.youtube.com/watch?v=f6QGZaqGy80 -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+	<!-- =====Head===== -->
+
+	<head>
+
+	  <!-- =====Meta Config.===== -->
+		<meta charset="utf-8" name="viewport" content="width=device-width initial-scale= 1.0">
+		<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+		<meta name="description" content="Projeto">
+  	<meta name="author" content="YuriY">
+		<!-- =====Meta Config.===== -->
+
+	  <!-- =====Title Tab===== -->
+		<title>Teste</title>
+		<!-- =====Title Tab===== -->
+
+		<!-- =====CSS Import===== -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+		<!-- =====CSS Import===== -->
+
+		<!-- =====CSS Inside===== -->
+		<style>
+		body {
+			margin: 0;
+			padding: 0;
+			top: 0;
+			left: 0;
+		}
+		.target {
+			/*display*/
+			display: none;
+			position: relative;
+			width: 100%;
+			height: 100%;
+			z-index: 5;
+			background: #808080;
+		}
+		#page {
+			/*display*/
+			display: block;
+			position: relative;
+			width: 100%;
+			height: 500px;
+		}
+		#buttons {
+			/*display*/
+			display: flex;
+			position: relative;
+			width: 100%;
+			height: auto;
+			margin: 15px 0;
+			justify-content: space-around;
+			z-index: 2;
+		}
+		.pageButton {
+			/*font*/
+			text-align: center;
+			text-decoration: none;
+			font-family: 'arial';
+			font-size: 1rem;
+			font-weight: 700;
+			color: #FFFFFF;
+			/*display*/
+			display: flex;
+			width: 180px;
+			height: 40px;
+			padding: 5px;
+			justify-content: center;
+			align-items: center;
+			background: #828282;
+			/*border*/
+			border: none;
+			border-radius: 10px;
+		}
+		.pageButton:target, .pageButton:hover {
+			/*font*/
+			color: #0D0D0D;
+			/*display*/
+			background: #EABA34;
+			/*cursor*/
+			cursor: pointer;
+		}
+		.pageContentLogo {
+			/*display*/
+			display: flex;
+			width: 100%;
+			justify-content: center;
+			align-items: center;
+		}
+		.pageLogo {
+			/*display*/
+			display: flex;
+			width: 50px;
+			height: 50px;
+			justify-content: space-around;
+			align-items: center;
+		}
+		.nossaTrajetoriaContainer {
+			/*display*/
+			display: block;
+		}
+		.nossaTrajetoriaContent {
+			/*display*/
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 290px;
+			padding: 10px 60px;
+			z-index: 1;
+			background: #FFFFFF;
+		}
+		.trajetoriaContainer {
+			/*display*/
+			display: block;
+			position: relative;
+			width: 100%;
+			height: 290px;
+			margin: 0;
+			padding: 10px 60px;
+			z-index: 1;
+			background: #FFFFFF;
+		}
+		.trajetoriaTexto {
+			/*font*/
+			text-align: justify;
+			text-align-last: left;
+			font-family: Verdana;
+			font-size: 13px;
+			letter-spacing: -1px;
+			line-height: 1.5;
+			word-spacing: -2px;
+			word-wrap: break-word;
+			color: #0D0D0D;
+			/*display*/
+			width: 100%;
+			height: auto;
+			margin: 0;
+			padding: 20px;
+		}
+		.empresasContainer {
+			/*display*/
+			display: flex;
+			margin: 0;
+			padding: 0 60px;
+			justify-content: space-around;
+			align-items: center;
+			background: #FFFFFF;
+		}
+		.empresasContent {
+			/*display*/
+			display: inline-block;
+			width: 100%;
+			height: 290px;
+			margin: 0;
+			padding: 10px;
+			z-index: 1;
+			background: #FFFFFF;
+			/*border*/
+			border-top: 5px solid #EABA34;
+			border-bottom: 5px solid #EABA34;
+			box-shadow: 0px 2.5px 5px 0px rgba(0, 0, 0, 0.5);
+		}
+		.empresasTitulo {
+			/*font*/
+			text-align: center;
+			font-family: Verdana;
+			font-size: 1rem;
+			font-weight: 700;
+			letter-spacing: -1px;
+			line-height: 1.5;
+			word-spacing: -2px;
+			word-wrap: break-word;
+			color: #EABA34;
+			/*display*/
+			width: 100%;
+			height: auto;
+			margin: 0;
+			padding: 10px;
+		}
+		.empresasTexto {
+			/*font*/
+			text-align: justify;
+			text-align-last: left;
+			font-family: Verdana;
+			font-size: 13px;
+			letter-spacing: -1px;
+			line-height: 1.5;
+			word-spacing: -2px;
+			word-wrap: break-word;
+			color: #0D0D0D;
+			/*display*/
+			width: 100%;
+			height: auto;
+			margin: 0;
+			padding: 10px;
+		}
+		.servicosContainer {
+			/*display*/
+			display: flex;
+			margin: 0;
+			padding: 0 60px;
+			justify-content: space-around;
+			align-items: center;
+			background: #FFFFFF;
+		}
+		.servicosContent {
+			/*display*/
+			display: inline-block;
+			width: 100%;
+			height: 290px;
+			margin: 0;
+			padding: 10px;
+			z-index: 1;
+			background: #FFFFFF;
+			/*border*/
+			border-top: 5px solid #EABA34;
+			border-bottom: 5px solid #EABA34;
+			box-shadow: 0px 2.5px 5px 0px rgba(0, 0, 0, 0.5);
+		}
+		.servicosTitulo {
+			/*font*/
+			text-align: center;
+			font-family: Verdana;
+			font-size: 1rem;
+			font-weight: 700;
+			letter-spacing: -1px;
+			line-height: 1.5;
+			word-spacing: -2px;
+			word-wrap: break-word;
+			color: #EABA34;
+			/*display*/
+			width: 100%;
+			height: auto;
+			margin: 0;
+			padding: 10px;
+		}
+		.servicosTexto {
+			/*font*/
+			text-align: justify;
+			text-align-last: left;
+			font-family: Verdana;
+			font-size: 13px;
+			letter-spacing: -1px;
+			line-height: 1.5;
+			word-spacing: -2px;
+			word-wrap: break-word;
+			color: #0D0D0D;
+			/*display*/
+			width: 100%;
+			height: auto;
+			margin: 0;
+			padding: 10px;
+		}
+		.valoresContainer {
+			/*display*/
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: #FFFFFF;
+		}
+		.valoresContent {
+			/*display*/
+			display: inline-block;
+			width: 100%;
+			height: 290px;
+			margin: 0;
+			padding: 10px 60px;
+		}
+		.valoresTitulo {
+			/*font*/
+			text-align: left;
+			font-family: Verdana;
+			font-size: 1rem;
+			font-weight: 700;
+			letter-spacing: -1px;
+			line-height: 1.5;
+			word-spacing: -2px;
+			word-wrap: break-word;
+			color: #EABA34;
+			/*display*/
+			width: 100%;
+			height: auto;
+			margin: 0;
+			padding: 5px 20px;
+		}
+		.valoresTexto {
+			/*font*/
+			text-align: justify;
+			text-align-last: left;
+			font-family: Verdana;
+			font-size: 13px;
+			letter-spacing: -1px;
+			line-height: 1.5;
+			word-spacing: -2px;
+			word-wrap: break-word;
+			color: #0D0D0D;
+			/*display*/
+			width: 100%;
+			height: auto;
+			margin: 0;
+			padding: 5px 20px;
+		}
+		.valoresTextoLista {
+			/*font*/
+			text-align: justify;
+			text-align-last: left;
+			font-family: Verdana;
+			font-size: 13px;
+			letter-spacing: -1px;
+			line-height: 1.5;
+			list-style: disc;
+			word-spacing: -2px;
+			word-wrap: break-word;
+			color: #0D0D0D;
+			/*display*/
+			width: 100%;
+			height: auto;
+			margin: 0;
+			padding: 5px 40px;
+		}
+		</style>
+		<!-- =====CSS Inside===== -->
+
+	</head>
+	
+	<!-- =====Head===== -->
+
+	<!-- =====body===== -->
+	
+	<body>
+
+		<main>	
+
+			<!--=====Code=====-->
+			<section id="page">
+				<div id="buttons">
+					<a class="pageButton" target="1">Nossa Trajetória</a>
+					<a class="pageButton" target="2">Empresas</a>
+					<a class="pageButton" target="3">Serviços</a>
+					<a class="pageButton" target="4">Valores</a>
+				</div>
+				<section>
+					<div class="nossaTrajetoriaContainer">
+						<div class="nossaTrajetoriaContent">
+							<p class="trajetoriaTexto">A época era do “milagre brasileiro”, e junto com ele inúmeras empresas resolveram
+								se instalar no Brasil. Com muita determinação, vontade e com olhos no futuro, uma pequena banca encabeçada
+								pelo Dr. Wilton Roveri decidiu acreditar nesse milagre e investir na empresa de Advocacia,
+								profissionalizando a sociedade no ramo bancário, que crescia em disparada no mercado.</p>
+							<p class="trajetoriaTexto">Anos de especialização, prática de mercado e confiabilidade de seus clientes
+								fizeram acreditar no surgimento das empresas de cobrança extrajudicial como braços da sociedade de
+								advogados, alavancando os resultados morosos provocados pelo Judiciário.</p>
+							<p class="trajetoriaTexto">Assim surgiram as empresas Exito e Celta, especializadas em telesserviços e
+								cobrança massificada especializada que buscam as mais modernas ferramentas de mercado para trazer resultados
+								positivos e cada vez mais rápidos. Por isso somos um grupo eficiente, que aliando conhecimentos jurídicos e
+								resultado hoje se tornou referência no mercado nacional da área de telemática.</p>
+						</div>
+					</div>
+					<div id="div1" class="target">
+						<div class="trajetoriaContainer">
+							<p class="trajetoriaTexto">A época era do “milagre brasileiro”, e junto com ele inúmeras empresas resolveram
+								se instalar no Brasil. Com muita determinação, vontade e com olhos no futuro, uma pequena banca encabeçada
+								pelo Dr. Wilton Roveri decidiu acreditar nesse milagre e investir na empresa de Advocacia,
+								profissionalizando a sociedade no ramo bancário, que crescia em disparada no mercado.</p>
+							<p class="trajetoriaTexto">Anos de especialização, prática de mercado e confiabilidade de seus clientes
+								fizeram acreditar no surgimento das empresas de cobrança extrajudicial como braços da sociedade de
+								advogados, alavancando os resultados morosos provocados pelo Judiciário.</p>
+							<p class="trajetoriaTexto">Assim surgiram as empresas Exito e Celta, especializadas em telesserviços e
+								cobrança massificada especializada que buscam as mais modernas ferramentas de mercado para trazer resultados
+								positivos e cada vez mais rápidos. Por isso somos um grupo eficiente, que aliando conhecimentos jurídicos e
+								resultado hoje se tornou referência no mercado nacional da área de telemática.</p>
+						</div>
+					</div>
+					<div id="div2" class="target">
+						<div class="empresasContainer">
+							<div class="empresasContent">
+								<div class="empresasContentLogo">
+									<img class="empresasLogo"
+										src="{{ url_for('static', filename='images/empresas/wilton_roveri_advogados.png') }}"
+										alt="Logo Wilton Roveri Advogados" />
+								</div>
+								<h4 class="empresasTitulo">Wilton Roveri Advogados</h4>
+								<p class="empresasTexto">O modelo organizacional focado na experiência dos sócios garante a eficiência na
+									solução de serviços jurídicos de qualidade e a garantia dos serviços extrajudiciais prestados pelas
+									empresas
+									de telesserviços do grupo. Desde 1978.</p>
+							</div>
+							<div class="empresasContent">
+								<div class="empresasContentLogo">
+									<img class="empresasLogo" src="{{ url_for('static', filename='images/empresas/exito_brasil.png') }}"
+										alt="Logo Exito" />
+								</div>
+								<h4 class="empresasTitulo">Exito Brasil</h4>
+								<p class="empresasTexto">Especializada na área de telesserviços, oferece todos os categorias de solução
+									efetividade
+									com desempenho e cumprimento de normas internacionais de segurança da informação. Experiência há mais de
+									15
+									anos em gestão de negociação e telecobrança.</p>
+							</div>
+							<div class="empresasContent">
+								<div class="empresasContentLogo">
+									<img class="empresasLogo" src="{{ url_for('static', filename='images/empresas/celta_credito.png') }}"
+										alt="Logo Celta Créditos" />
+								</div>
+								<h4 class="empresasTitulo">Celta Crédito</h4>
+								<p class="empresasTexto">Experiência em recuperação de créditos massificados, middle marketing e carteiras
+									de
+									hard core. Negociadores treinados e instalações modernas atendendo a todas as normas do setor garantem a
+									efetividade. Equipe diferenciada especialista em recuperação de créditos.</p>
+							</div>
+						</div>
+					</div>
+					<div id="div3" class="target">
+						<div class="servicosContainer">
+							<div class="servicosContent">
+								<h4 class="servicosTitulo">Roveri Digital</h4>
+								<p class="servicosTexto">Forma moderna de recuperação de crédito via meios digitais com apoio de uma equipe
+									especializada para o suporte aos canais Whatsapp, Chatbot e Ura interativa. Cada cliente tem uma forma
+									mais eficaz de acertar suas dívidas, o omnichanel oferece os caminhos. Omnichannel e comunicação
+									integrada. Interação, agilidade, adaptabilidade e efetividade.</p>
+							</div>
+							<div class="servicosContent">
+								<h4 class="servicosTitulo">Bigger +</h4>
+								<p class="servicosTexto">Solução humana e tecnológica de comunicação voltada para as necessidades
+									comerciais, suporte ao cliente e atendimentos em diversos segmentos. Telemática aliando tecnologia da
+									informação e comunicação. Equipe treinada com foco na experiência do usuário.</p>
+							</div>
+							<div class="servicosContent">
+								<h4 class="servicosTitulo">Eu Tô Limpo</h4>
+								<p class="servicosTexto">Uma plataforma digital de soluções financeiras com diversos canais de atendimento e
+									conteúdos exclusivos. Solidez e segurança que só um gigante em tecnologia pode oferecer. Oportunidade mais
+									que uma plataforma de negociações. Atual informação, agilidade e conforto do seu jeito.</p>
+							</div>
+						</div>
+					</div>
+					<div id="div4" class="target">
+						<div class="valoresContainer">
+							<div class="valoresContent">
+								<div class="valoresTextos">
+									<h1 class="valoresTitulo">Missão:</h1>
+									<p class="valoresTexto">Serviços diferenciados com foco em contato center, especialização em trabalhos
+										jurídicos.</p>
+									<h1 class="valoresTitulo">Visão:</h1>
+									<p class="valoresTexto">Conquistar os melhores resultados em recuperação de crédito para as maiores
+										empresas do mercado nacional</p>
+									<h1 class="valoresTitulo">Inovação:</h1>
+									<ul class="valoresTextoLista">
+										<li>Experiência em teleatendimento;</li>
+										<li>Excelência no âmbito jurídico;</li>
+										<li>Inovação em planos estratégicos para a empresa.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</section>
+			<!--=====Code=====-->
+
+		</main>
+
+		<!-- =====Script Import===== -->
+		<script src="script.js"></script>
+		<!-- =====Script Import===== -->
+		
+		<!-- =====Script Inside===== -->
+		<script type="text/javascript">
+			jQuery(function () {
+				jQuery('.pageButton').click(function () {
+					jQuery('.target').hide();
+					jQuery('#div' + $(this).attr('target')).show();
+				});
+			});
+		</script>
+		<script>
+			const activePage = window.location.pathname;
+			cons navLinks = document.querySelectorAll('nav a').
+				forEach(link => {
+					if (link.href.includes(`${activePage}`)) {
+						link.classList.add('active');
+					}
+				})
+			console.log(activePage);
+		</script>
+		<!-- =====Script Inside===== -->
+
+	</body>
+	
+	<!-- =====body===== -->
+
+</html>

@@ -1,0 +1,105 @@
+<!--=====Projeto - Uma div especifica troca por várias frases a cada periodo de tempo=====-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<!--==========-->
+	<head>
+	  <!--=====Meta Config.=====-->
+		<meta charset="utf-8" name="viewport" content="width=device-width initial-scale= 1.0">
+		<meta name="description" content="Projeto">
+  	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  	<meta name="author" content="YuriY">
+		<!--=====End Meta Config.=====-->
+	  <!--=====Title Tab=====-->
+		<title>Teste</title>
+		<!--=====End Title Tab=====-->
+		<!--=====CSS Import=====-->
+		<link rel="stylesheet" href="./style.css">
+		<!--=====End CSS Import=====-->
+		<!--=====CSS Inside=====-->
+		<style>
+		</style>
+		<!--=====End CSS Inside=====-->
+	</head>
+<!--==========-->
+	<body>
+		<!--=====Main=====-->		
+		<main>	
+			<!--=====Code=====-->
+			<div class="container">
+		    <div class="carousel">
+		      <div class="pre-word">I know </div>
+		      <div class="change-word">
+		        <div class="change-inner">
+		          <div class="change-inner-element">Html</div>
+		          <div class="change-inner-element">Css</div>
+		          <div class="change-inner-element">Bootstrap</div>
+		          <div class="change-inner-element">Javascript</div>
+		          <div class="change-inner-element">ReactJs</div>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+			<!--=====End Code=====-->
+		</main>
+		<!--=====End Main=====-->		
+		<!--=====Script Import=======-->
+		<script src="script.js"></script>
+		<!--=====End Script Import=====-->
+		<!--=====Script Inside=====-->
+		<script>
+		body {
+			background: #2e9c12;
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+		}
+		.container {
+			min-height: 100vh;
+			display: grid;
+			place-items: center;
+			max-width: 400px;
+			margin: auto;
+			width: 100%;
+			color: #fff;
+		}
+		.container .carousel {
+			position: relative;
+			font-size: 30px;
+			line-height: 45px;
+			max-width: 350px;
+			width: 100%;
+			display: grid;
+			grid-template-columns: 1fr 2fr;
+		}
+		.container .carousel .change-word {
+			overflow: hidden;
+			height: 45px;
+		}
+		.container .carousel .change-inner {
+			animation: rotate 10s ease-in-out infinite;
+		}
+		.container .carousel .change-inner-element {
+			font-weight: 700;
+			text-shadow: 2px 2px 2px #e67e22;
+		}
+		@keyframes rotate {
+			0%, 20% {
+				transform: translateY(0);
+			}
+			25%, 45% {
+				transform: translateY(-45px);
+			}
+			50%, 70% {
+				transform: translateY(-90px);
+			}
+			75%, 95% {
+				transform: translateY(-135px);
+			}
+			100% {
+				transform: translateY(-180px);
+			}
+		}
+		</script>
+		<!--=====End Script Inside=====-->
+	</body>
+<!--==========-->
+</html>

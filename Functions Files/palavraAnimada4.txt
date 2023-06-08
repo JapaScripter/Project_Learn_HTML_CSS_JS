@@ -1,0 +1,187 @@
+<!--=====Projeto - Uma div especifica troca por várias frases a cada periodo de tempo=====-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<!--==========-->
+	<head>
+	  <!--=====Meta Config.=====-->
+		<meta charset="utf-8" name="viewport" content="width=device-width initial-scale= 1.0">
+		<meta name="description" content="Projeto">
+  	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  	<meta name="author" content="YuriY">
+		<!--=====End Meta Config.=====-->
+	  <!--=====Title Tab=====-->
+		<title>Teste</title>
+		<!--=====End Title Tab=====-->
+		<!--=====CSS Import=====-->
+		<link rel="stylesheet" href="./style.css">
+		<!--=====End CSS Import=====-->
+		<!--=====CSS Inside=====-->
+		<style>
+		@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900');
+		 body {
+			 background: #642b73;
+			/* fallback for old browsers */
+			 background: -webkit-linear-gradient(to right, #c6426e, #642b73);
+			/* Chrome 10-25, Safari 5.1-6 */
+			 background: linear-gradient(to right, #c6426e, #642b73);
+			/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			 height: calc(100vh - 60px);
+			 font-family: "Source Sans Pro", sans-serif;
+			 color: #151515;
+			 padding: 30px;
+		}
+		 p {
+			 display: block;
+			 font-weight: 700;
+			 font-size: 3em;
+			 position: relative;
+			 text-align: center;
+			 transition: all 0.3s ease-in-out;
+		}
+		 .words {
+			 text-align: left;
+			 width: 216px;
+			 height: 40px;
+			 display: inline-block;
+			 overflow: hidden;
+			 animation: changewords 7s infinite;
+		}
+		 .word {
+			 color: #de6449;
+			 position: absolute;
+			 top: 0;
+			 height: 60px;
+			 width: 160px;
+			 overflow: hidden;
+			 animation: changewordfirst 7s infinite;
+		}
+		 .word:nth-of-type(2) {
+			 color: #791e94;
+			 animation: changewordsecond 7s infinite;
+		}
+		 .word:nth-of-type(3) {
+			 color: #41d3bd;
+			 animation: changewordthird 7s infinite;
+		}
+		 @keyframes changewordfirst {
+			 0% {
+				 width: 160px;
+			}
+			 16.5% {
+				 width: 160px;
+			}
+			 25% {
+				 width: 0;
+			}
+			 93.75% {
+				 width: 0;
+			}
+			 100% {
+				 width: 160px;
+			}
+		}
+		 @keyframes changewordsecond {
+			 0% {
+				 width: 0;
+			}
+			 25% {
+				 width: 0;
+			}
+			 33% {
+				 width: 195px;
+			}
+			 50% {
+				 width: 195px;
+			}
+			 58.25% {
+				 width: 0;
+			}
+			 100% {
+				 width: 0;
+			}
+		}
+		 @keyframes changewordthird {
+			 0% {
+				 width: 0;
+			}
+			 58.25% {
+				 width: 0;
+			}
+			 66% {
+				 width: 118px;
+			}
+			 85% {
+				 width: 118px;
+			}
+			 93.75% {
+				 width: 0;
+			}
+			 100% {
+				 width: 0;
+			}
+		}
+		 @keyframes changewords {
+			 0% {
+				 width: 160px;
+			}
+			 16.5% {
+				 width: 160px;
+			}
+			 25% {
+				 width: 0;
+			}
+			 33% {
+				 width: 195px;
+			}
+			 50% {
+				 width: 195px;
+			}
+			 58.25% {
+				 width: 0;
+			}
+			 66% {
+				 width: 118px;
+			}
+			 85% {
+				 width: 118px;
+			}
+			 93.75% {
+				 width: 0;
+			}
+			 100% {
+				 width: 160px;
+			}
+		}	
+		</style>
+		<!--=====End CSS Inside=====-->
+	</head>
+<!--==========-->
+	<body>
+		<!--=====Main=====-->		
+		<main>	
+			<!--=====Code=====-->
+			<div class="container">
+			  <div class="slogan">
+			    <p>WE 
+			      <span class="words">
+			        <span class="word">DESIGN</span>
+			        <span class="word">DEVELOP</span>
+			        <span class="word">HOST</span>
+			      </span>
+			      YOUR SITE</p>
+			  </div>
+			</div>
+			<!--=====End Code=====-->
+		</main>
+		<!--=====End Main=====-->		
+		<!--=====Script Import=======-->
+		<script src="script.js"></script>
+		<!--=====End Script Import=====-->
+		<!--=====Script Inside=====-->
+		<script>
+		</script>
+		<!--=====End Script Inside=====-->
+	</body>
+<!--==========-->
+</html>

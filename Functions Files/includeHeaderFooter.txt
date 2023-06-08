@@ -1,0 +1,64 @@
+<!-- =====Este projeto é um Javascript que importa header e footer===== -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- ========== -->
+	<head>
+	  <!-- =====Meta Config.===== -->
+		<meta charset="utf-8" name="viewport" content="width=device-width initial-scale= 1.0">
+		<meta name="description" content="Projeto">
+  	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  	<meta name="author" content="YuriY">
+		<!-- =====Meta Config.===== -->
+	  <!-- =====Title Tab===== -->
+		<title>Teste</title>
+		<!-- =====Title Tab===== -->
+		<!-- =====CSS Import===== -->
+		<!-- =====CSS Import===== -->
+		<!-- =====CSS Inside===== -->
+		<style>
+		</style>
+		<!-- =====CSS Inside===== -->
+		<!-- =====Script Header and Footer Import===== -->
+		<script>
+		fetch("./pages/header.html")
+			.then(response => {
+				return response.text()
+			})
+			.then(data => {
+				document.querySelector("header").innerHTML = data;
+			});
+		fetch("./pages/footer.html")
+			.then(response => {
+				return response.text()
+			})
+			.then(data => {
+				document.querySelector("footer").innerHTML = data;
+			});
+		</script>
+		<!-- =====Script Header and Footer Import===== -->
+	</head>
+<!-- ========== -->
+	<body>
+		<!-- =====Body===== -->
+			<!-- =====Header===== -->
+			<header></header>
+			<!-- =====Header===== -->		
+			<main>	
+				<!-- =====Code===== -->
+				<!-- =====Code===== -->
+			</main>
+			<!-- =====Footer===== -->
+			<footer></footer>
+			<!-- =====Footer===== -->
+		<!-- =====Body===== -->
+		<!-- =====Script Import======= -->
+		<script src="script.js"></script>
+		<!-- =====Script Import===== -->
+		<!-- =====Script Inside===== -->
+		<script>
+		</script>
+		<!-- =====Script Inside===== -->
+	</body>
+<!-- ========== -->
+</html>

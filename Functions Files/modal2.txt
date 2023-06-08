@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>replit</title>
+	<!--=====CSS Vaga=====-->
+	<style>
+		.vagaSubContent {
+			display: flex;
+		}
+
+		.vagaModalButton {
+			/*display*/
+			display: flex;
+			height: 100vh;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.vagaModalButton a {
+			/*font*/
+			text-decoration: none;
+			text-transform: uppercase;
+			font-family: 'Roboto', sans-serif;
+			color: rgba(0, 0, 0, 0.4);
+			/*display*/
+			display: inline-block;
+			padding: 15px;
+			background: none;
+			/*border*/
+			border: 2px solid rgba(0, 0, 0, 0.4);
+			border-radius: 10px;
+			box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+			/*cursor*/
+			cursor: pointer;
+		}
+
+		.vagaModalButton a:hover {
+			/*font*/
+			color: #EABA34;
+			/*display*/
+			transform: scale(1.1);
+			transition: all 2s ease-out-in;
+			/*border*/
+			border: 2px solid #EABA34;
+		}
+
+		.vagaModal {
+			/*display*/
+			visibility: hidden;
+			display: flex;
+			position: fixed;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			align-items: center;
+			justify-content: center;
+			opacity: 0;
+			transition: all .4s;
+			background: rgba(0, 0, 0, 0.8);
+		}
+
+		.vagaModal:target {
+			/*display*/
+			visibility: visible;
+			opacity: 1;
+		}
+
+		.vagaModalContent {
+			/*display*/
+			display: inline-block;
+			position: relative;
+			width: 350px;
+			height: 450px;
+			padding: 1rem;
+			justify-items: center;
+			align-items: center;
+			background: #FFFFFF;
+			/*border*/
+			border: 5px solid#eaba34;
+			border-radius: 50px;
+		}
+
+		.vagaModalContent h1 {
+			/*font*/
+			text-align: center;
+			/*display*/
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+
+		.vagaModalInput {
+			/*font*/
+			font-size: 15px;
+			font-weight: 500;
+			/*display*/
+			display: block;
+			width: 100%;
+			height: auto;
+			margin: 2rem 0;
+			outline: 0;
+			/*border*/
+			border: none;
+			border-bottom: 2px solid rgba(0, 0, 0, 0.7);
+		}
+
+		.vagaModalInput:focus {
+			/*border*/
+			border: none;
+			border-bottom: 2px solid rgba(234, 186, 52, 1);
+		}
+
+		.vagaModalAnexo {
+			/*display*/
+			display: flex;
+			width: 100%;
+			height: auto;
+			margin: 2rem auto;
+			justify-content: center;
+			align-items: center;
+			outline: 0;
+		}
+
+		.vagaModalSubContent {
+			/*font*/
+			text-align: center;
+			/*display*/
+			width: 100%;
+		}
+
+		.vagaModalSubContentButton {
+			/*font*/
+			text-align: center;
+			text-decoration: none;
+			text-transform: uppercase;
+			color: rgba(0, 0, 0, 0.7);
+			/*display*/
+			display: inline-block;
+			width: auto;
+			height: 100%;
+			margin: 2rem auto;
+			padding: 10px 20px;
+			/*border*/
+			border: 2px solid rgba(0, 0, 0, 0.7);
+			border-radius: 10px;
+		}
+
+		.vagaModalSubContentButton:hover {
+			/*font*/
+			color: #EABA34;
+			/*border*/
+			border: 2px solid #EABA34;
+		}
+	</style>
+	<!--=====CSS Vaga=====-->
+</head>
+
+<body>
+	<!--=====Vaga Button=====-->
+	<div class="vagaModalButton">
+		<a href="#vagaModalMarketing">Cadastrar-se</a>
+	</div>
+	<div id="vagaModalMarketing" class="vagaModal">
+		<div class="vagaModalContent">
+			<h1>Marketing</h1>
+			<input class="vagaModalInput" type="text" placeholder="Nome Completo"></input>
+			<input class="vagaModalInput" type="email" placeholder="E-mail"></input>
+			<input class="vagaModalInput cel" type="tel" placeholder="Celular"></input>
+			<input class="vagaModalAnexo" type="file" accept="application/pdf"></input>
+			<p>Tipo de Arquivo Aceito "PDF"</p>
+			<div class="vagaModalSubContent">
+				<a class="vagaModalSubContentButton" href="">Cadastrar</a>
+			</div>
+		</div>
+	</div>
+	<!--=====End Vaga Button=====-->
+	<!--=====Celular Formato=====-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.1.62/jquery.inputmask.bundle.js"></script>
+	<!--=====End Celular Formato=====-->
+	<!--=====Script Celular Formato=====-->
+	<script>
+		$(document).ready(function () {
+			var phones = [{"mask": "(##) # ####-####"}];
+			$(".cel").inputmask({
+				mask: phones,
+				greedy: false,
+				definitions: {"#": {validator: "[0-9]", cardinality: 1}}
+			});
+		});
+	</script>
+	<!--=====End Script Celular Formato=====-->
+</body>
+
+</html>

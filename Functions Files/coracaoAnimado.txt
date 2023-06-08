@@ -1,0 +1,78 @@
+<!--=====Este projeto é um coração animado igual das redes sociais=====-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<!--==========-->
+	<head>
+	   <!--=====Meta Config.=====-->
+		<meta charset="utf-8" name="viewport" content="width=device-width initial-scale= 1.0">
+		<meta name="description" content="Projeto">
+  	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  	<meta name="author" content="YuriY">
+		<!--=====End Meta Config.=====-->
+	  <!--=====Title Tab=====-->
+		<title>Teste</title>
+		<!--=====End Title Tab=====-->
+		<!--=====CSS Import=====-->
+		<!--=====End CSS Import=====-->
+		<!--=====CSS Inside=====-->
+		<style>
+		.center{
+		  position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  transform: translate(-50%, -50%);
+		  transform: scale(2, 2);
+		  transform-origin: center center;
+		}
+		.heart-checkbox{
+		  display: none;
+		}
+		.path{
+		  transition: fill 200ms, stroke 50ms, scale 100ms ease-out;
+		}
+		svg{
+		  transition: all 150ms ease-out;
+		}
+		.heart-checkbox:checked + .shape > svg > .path{
+		  fill: red;
+		  opacity: 1;
+		  stroke: red;
+		  width: 55px;
+		  height: 55px;
+		  transform: scale(1.03,1.03);
+		  transform-origin: center center;
+		}
+		.heart-checkbox:checked + .shape > svg{
+		   filter: drop-shadow(0 0 6px rgba(255, 0, 0, .8));
+		}
+		</style>
+		<!--=====End CSS Inside=====-->
+	</head>
+<!--==========-->
+	<body>
+		<!--=====Main=====-->		
+		<main>	
+			<!--=====Code=====-->
+			<div class="center">
+			  <input type="checkbox" class="heart-checkbox" id="favorite" onclick="favorite()" />
+			  <label class="shape" for="favorite">
+			    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+			      <path  stroke="none" d="M0 0h24v24H0z" fill="none" />
+			      <path  class="path" d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+			    </svg>
+			  </label>
+			</div>
+			<!--=====End Code=====-->
+		</main>
+		<!--=====End Main=====-->
+		<!--=====Script Import=======-->
+		<script src="script.js"></script>
+		<!--=====End Script Import=====-->
+		<!--=====Script Inside=====-->
+		<script>
+		</script>
+		<!--=====End Script Inside=====-->
+	</body>
+<!--==========-->
+</html>

@@ -1,0 +1,68 @@
+<!--=====Este projeto calcula dias, meses e anos referente a 2 datas=====-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<!--==========-->
+	<head>
+	  <!--=====Meta Config.=====-->
+		<meta charset="utf-8" name="viewport" content="width=device-width initial-scale= 1.0">
+		<meta name="description" content="Projeto">
+  	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  	<meta name="author" content="YuriY">
+		<!--=====End Meta Config.=====-->
+	  <!--=====Title Tab=====-->
+		<title>Teste</title>
+		<!--=====End Title Tab=====-->
+		<!--=====CSS Import=====-->
+		<!--=====End CSS Import=====-->
+		<!--=====CSS Inside=====-->
+		<style>
+		</style>
+		<!--=====End CSS Inside=====-->
+	</head>
+<!--==========-->
+	<body>
+		<!--=====Main=====-->		
+		<main>	
+			<!--=====Code=====-->
+			<h1>Calcular dias</h1>
+			<form name="form_main">
+				<label for="date_ini">Date Inicial: </label> 
+				<input name="date_ini" id="date_ini" type="date"> <br>
+				<label for="date_end">Date Final: </label> 
+				<input name="date_end" id="date_end" type="date"> <br>
+				<label for="dias">Dias passados: </label> 
+				<span id="dias"></span> <br>
+				<label for="meses">Meses passados: </label> 
+				<span id="meses"></span> <br>
+				<label for="anos">Anos passados: </label> 
+				<span id="anos"></span> <br>
+				<button type="button" onclick="countDays()">Contar</button>
+			</form>
+			<!--=====End Code=====-->
+		</main>
+		<!--=====End Main=====-->
+		<!--=====Script Import=======-->
+		<script src="script.js"></script>
+		<!--=====End Script Import=====-->
+		<!--=====Script Inside=====-->
+		<script>
+			const second = 1000;
+			const minute = second * 60;
+			const hour = minute * 60;
+			const day = hour * 24;
+			const month = day * 30;
+			const year = month * 12;
+			function countDays() {
+				let date_ini = new Date(document.form_main.date_ini.value);
+				let date_end = new Date(document.form_main.date_end.value);
+				let diff = date_end.getTime() - date_ini.getTime();
+				document.getElementById('dias').innerText = Math.floor(diff / day);
+				document.getElementById('meses').innerText = Math.floor(diff / month);
+				document.getElementById('anos').innerText = Math.floor(diff / year);
+			}
+		</script>
+		<!--=====End Script Inside=====-->
+	</body>
+<!--==========-->
+</html>

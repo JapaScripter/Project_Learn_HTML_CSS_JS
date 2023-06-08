@@ -1,0 +1,236 @@
+<!--=====Este projeto é uma tabela=====-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<!--==========-->
+	<head>
+	  <!--=====Meta Config.=====-->
+		<meta charset="utf-8" name="viewport" content="width=device-width initial-scale= 1.0">
+		<meta name="description" content="Projeto">
+  	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  	<meta name="author" content="YuriY">	
+		<!--=====End Meta Config.=====-->
+	  <!--=====Title Tab=====-->
+		<title>Table</title>
+		<!--=====End Title Tab=====-->
+		<!--=====CSS Import=====-->
+		<link href="./style.css" type="text/css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css"/>
+		<!--=====End CSS Import=====-->
+		<!--=====CSS Inside=====-->
+		<style>
+		td.details-control {
+			background: url('../resources/details_open.png') no-repeat center center;
+			cursor: pointer;
+		}
+		tr.details td.details-control {
+			background: url('../resources/details_close.png') no-repeat center center;
+		}
+		</style>
+		<!--=====End CSS Inside=====-->
+	</head>
+<!--==========-->
+	<body>
+			<!--=====Header=====-->
+			<header></header>
+			<!--=====End Header=====-->
+			<!--=====CODE TESTE=====-->
+			<div id="example_wrapper" class="dataTables_wrapper">
+			<div class="dataTables_length" id="example_length">
+				<label>Show
+					<select name="example_length" aria-controls="example" class="">
+						<option value="10">10</option>
+						<option value="25">25</option>
+						<option value="50">50</option>
+						<option value="100">100</option>
+					</select>entries
+				</label>
+			</div>
+			<div id="example_filter" class="dataTables_filter">
+				<label>Search:
+					<input type="search" class="" placeholder="" aria-controls="example">
+				</label>
+			</div>
+			<table id="example" class="display dataTable" style="width: 100%;" aria-describedby="example_info">
+				<thead>
+					<tr>
+						<th class="dt-control sorting_disabled" rowspan="1" colspan="1" aria-label="" style="width: 37px;"></th>
+						<th class="sorting sorting_asc" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Name: activate to sort column descending" aria-sort="ascending" style="width: 169px;">Name</th>
+						<th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 265px;">Position</th>
+						<th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 128px;">Office</th>
+						<th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 99px;">Salary</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="odd">
+						<td class="  dt-control"></td>
+						<td class="sorting_1">Airi Satou</td>
+						<td>Accountant</td>
+						<td>Tokyo</td>
+						<td>$162,700</td>
+					</tr>
+					<tr class="even">
+						<td class="  dt-control"></td>
+						<td class="sorting_1">Angelica Ramos</td>
+						<td>Chief Executive Officer (CEO)</td>
+						<td>London</td>
+						<td>$1,200,000</td>
+					</tr>
+					<tr class="odd">
+						<td class="  dt-control"></td>
+						<td class="sorting_1">Ashton Cox</td>
+						<td>Junior Technical Author</td>
+						<td>San Francisco</td>
+						<td>$86,000</td>
+					</tr>
+					<tr class="even">
+						<td class="  dt-control"></td>
+						<td class="sorting_1">Bradley Greer</td>
+						<td>Software Engineer</td>
+						<td>London</td>
+						<td>$132,000</td>
+					</tr>
+					<tr class="odd">
+						<td class="  dt-control"></td>
+						<td class="sorting_1">Brenden Wagner</td>
+						<td>Software Engineer</td>
+						<td>San Francisco</td>
+						<td>$206,850</td>
+					</tr>
+					<tr class="even">
+						<td class="  dt-control"></td>
+						<td class="sorting_1">Brielle Williamson</td>
+						<td>Integration Specialist</td>
+						<td>New York</td>
+						<td>$372,000</td>
+					</tr>
+					<tr class="odd">
+						<td class="  dt-control"></td>
+						<td class="sorting_1">Bruno Nash</td>
+						<td>Software Engineer</td>
+						<td>London</td>
+						<td>$163,500</td>
+					</tr>
+					<tr class="even">
+						<td class="  dt-control"></td>
+						<td class="sorting_1">Caesar Vance</td>
+						<td>Pre-Sales Support</td>
+						<td>New York</td>
+						<td>$106,450</td>
+					</tr>
+					<tr class="odd">
+						<td class="  dt-control"></td>
+						<td class="sorting_1">Cara Stevens</td>
+						<td>Sales Assistant</td>
+						<td>New York</td>
+						<td>$145,600</td>
+					</tr>
+					<tr class="even">
+						<td class="  dt-control"></td>
+						<td class="sorting_1">Cedric Kelly</td>
+						<td>Senior Javascript Developer</td>
+						<td>Edinburgh</td>
+						<td>$433,060</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<th class="dt-control" rowspan="1" colspan="1"></th>
+						<th rowspan="1" colspan="1">Name</th>
+						<th rowspan="1" colspan="1">Position</th>
+						<th rowspan="1" colspan="1">Office</th>
+						<th rowspan="1" colspan="1">Salary</th>
+					</tr>
+				</tfoot>
+			</table>
+			<div class="dataTables_info" id="example_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div>
+			<div class="dataTables_paginate paging_simple_numbers" id="example_paginate">
+				<a class="paginate_button previous disabled" aria-controls="example" data-dt-idx="previous" tabindex="-1" id="example_previous">Previous</a>
+				<span>
+					<a class="paginate_button current" aria-controls="example" data-dt-idx="0" tabindex="0">1</a>
+					<a class="paginate_button " aria-controls="example" data-dt-idx="1" tabindex="0">2</a>
+					<a class="paginate_button " aria-controls="example" data-dt-idx="2" tabindex="0">3</a>
+					<a class="paginate_button " aria-controls="example" data-dt-idx="3" tabindex="0">4</a>
+					<a class="paginate_button " aria-controls="example" data-dt-idx="4" tabindex="0">5</a>
+					<a class="paginate_button " aria-controls="example" data-dt-idx="5" tabindex="0">6</a>
+				</span>
+				<a class="paginate_button next" aria-controls="example" data-dt-idx="next" tabindex="0" id="example_next">Next</a>
+			</div>
+		</div>
+		<!--=====End CODE TESTE=====-->
+		<!--=====Footer=====-->
+		<footer></footer>
+		<!--=====End Footer=====-->
+		<!--=====Script Import=======-->
+		<script src="script.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+		<script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
+		<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+		<!--=====End Script Import=====-->
+		<!--=====Script Inside=====-->
+		<script>
+		function format(d) {
+			return (
+				'Full name: ' +
+				d.first_name +
+				' ' +
+				d.last_name +
+				'<br>' +
+				'Salary: ' +
+				d.salary +
+				'<br>' +
+				'The child row can contain any data you wish, including links, images, inner tables etc.'
+			);
+		}
+		$(document).ready(function () {
+			var dt = $('#example').DataTable({
+				processing: true,
+				serverSide: true,
+				ajax: 'scripts/ids-objects.php',
+				columns: [
+					{
+						class: 'details-control',
+						orderable: false,
+						data: null,
+						defaultContent: '',
+					},
+					{ data: 'first_name' },
+					{ data: 'last_name' },
+					{ data: 'position' },
+					{ data: 'office' },
+				],
+				order: [[1, 'asc']],
+			});
+			// Array to track the ids of the details displayed rows
+			var detailRows = [];
+			$('#example tbody').on('click', 'tr td.details-control', function () {
+				var tr = $(this).closest('tr');
+				var row = dt.row(tr);
+				var idx = detailRows.indexOf(tr.attr('id'));
+				if (row.child.isShown()) {
+					tr.removeClass('details');
+					row.child.hide();
+					// Remove from the 'open' array
+					detailRows.splice(idx, 1);
+				} 
+				else {
+					tr.addClass('details');
+					row.child(format(row.data())).show();
+					// Add to the 'open' array
+					if (idx === -1) {
+						detailRows.push(tr.attr('id'));
+					}
+				}
+			});
+			// On each draw, loop over the `detailRows` array and show any child rows
+			dt.on('draw', function () {
+				detailRows.forEach(function(id, i) {
+					$('#' + id + ' td.details-control').trigger('click');
+				});
+			});
+		});
+		</script>
+		<!--=====End Script Inside=====-->
+	</body>
+<!--==========-->
+</html>

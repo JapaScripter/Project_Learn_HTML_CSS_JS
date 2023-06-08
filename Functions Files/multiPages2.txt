@@ -1,0 +1,94 @@
+<!-- https://www.youtube.com/watch?v=f6QGZaqGy80 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+	<style>
+	body {
+		width: 100%;
+		height: 100%;
+		background: #0d0d0d;
+		COLOR: #FFF;
+	}
+	.menu {
+		margin: 5% 12%;
+		background: none;
+	}
+	.menu a, #showall {
+		display: inline-block;
+		margin: 0 1%;
+		padding: 3%;
+		border-radius: 11%;
+		-webkit-box-shadow: 0 3px 12px 3px rgba(0, 0, 0, 0.2);
+		-moz-box-shadow: 0 3px 12px 3px rgba(0, 0, 0, 0.2);
+		box-shadow: 0 3px 12px 3px rgba(0, 0, 0, 0.2);
+	}
+	.menu a:nth-child(1) {
+		background: rgb(255, 0, 0);
+		cursor: pointer;
+		color: #fff;
+	}
+	.menu a:nth-child(2) {
+		background: rgb(0, 255, 0);
+		cursor: pointer;
+		color: #fff;
+	}
+	.menu a:nth-child(3) {
+		background: rgb(0, 0, 255);
+		cursor: pointer;
+		color: #fff;
+	}
+	.menu a:nth-child(4) {
+		background: rgb(255, 255, 0);
+		cursor: pointer;
+		color: #fff;
+	}
+	.target_box {
+		margin: 6% 10%;
+		background: none;
+	}
+	</style>
+</head>
+
+<body>
+	 <div class="menu">
+		 <a id="showall">All</a>
+		 <a class="single" target="1">um</a>
+		 <a class="single" target="2">dois</a>
+		 <a class="single" target="3">tres</a>
+	 </div>
+	<section class="target_box">
+		<div id="div1" class="target">Conteudo 1</div>
+		<div id="div2" class="target">Conteudo 2</div>
+		<div id="div3" class="target">Conteudo 3</div>
+	</section>
+	<script type="text/javascript">
+		jQuery(function() {
+			jQuery('#showall').click(function() {
+				jQuery('.target').show();
+			});
+			jQuery('.single').click(function() {
+				jQuery('.target').hide();
+				jQuery('#div' + $(this).attr('target')).show();
+			});
+		});
+	</script>
+	<script>
+		const activePage = window.location.pathname;
+		cons navLinks = document.querySelectorAll('nav a').
+			forEach(link => {
+				if(link.href.includes(`${activePage}`)){
+					link.classList.add('active');
+				}
+			})
+		console.log(activePage);
+	</script>
+</body>
+
+</html>

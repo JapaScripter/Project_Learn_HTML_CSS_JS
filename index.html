@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- =====Head===== -->
+
+<head>
+	<!-- =====Meta Config.===== -->
+	<meta charset="utf-8" name="viewport" content="width=device-width initial-scale= 1.0">
+	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+	<meta name="description" content="Projeto">
+	<meta name="author" content="YuriY">
+	<!-- =====Meta Config.===== -->
+
+	<!-- =====Title Tab===== -->
+	<title>Teste</title>
+	<!-- =====Title Tab===== -->
+
+	<!-- =====CSS Import===== -->
+	<!-- =====CSS Import===== -->
+
+	<!-- =====CSS Inside===== -->
+	<style>
+		.dropMenu {
+			color: red;
+			width: 10vw;
+			height: auto;
+			padding: 16px;
+			font-size: 16px;
+			border: none;
+			cursor: pointer;
+			border: 1px solid #0d0d0d;
+		}
+
+		.dropItem {
+			color: red;
+			display: none;
+			position: relative;
+			width: 100%;
+			height: 100%;
+			bakcground: #0D0D0D;
+			border: 1px solid #EABA34;
+			border-radius: 1vw;
+		}
+
+		.dropMenu:active+.dropItem,
+		.dropMenu:focus+.dropItem {
+			display: block;
+		}
+
+		.dropItem {
+			color: red;
+		}
+
+		.dropItem:hover {
+			background-color: #EABA34;
+		}
+	</style>
+	<!-- =====CSS Inside===== -->
+
+</head>
+<!-- =====Head===== -->
+
+<!-- =====body===== -->
+
+<body>
+
+	<main>
+
+		<!--=====Code=====-->
+		<input type="text" id="dropMenu" class="dropMenu" value="">
+		<option class="dropItem" value="1">1</option>
+		<option class="dropItem" value="2">2</option>
+		<option class="dropItem" value="3">3</option>
+		<option class="dropItem" value="4">4</option>
+		<option class="dropItem" value="5">5</option>
+		<option class="dropItem" value="6">6</option>
+		</input>
+		<!--=====Code=====-->
+
+	</main>
+
+	<!-- =====Script Import===== -->
+	<script src="script.js"></script>
+	<!-- =====Script Import===== -->
+
+	<!-- =====Script Inside===== -->
+	<script>
+		const dropMenu = document.getElementById("dropMenu");
+		const dropItem = document.querySelector(".dropItem");
+		// Adiciona um ouvinte de evento de clique para o menu suspenso
+		dropItem.addEventListener("click", (event) => {
+			// Verifica se o elemento clicado é uma opção
+			if (event.target.classList.contains("dropItem")) {
+				// Define o valor da entrada como o valor da opção selecionada
+				dropMenu.value = event.target.value;
+			}
+		});
+	</script>
+	<!-- =====Script Inside===== -->
+
+</body>
+<!-- =====body===== -->
+
+</html>

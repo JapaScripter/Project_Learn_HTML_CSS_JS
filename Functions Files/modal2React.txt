@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- =====Head===== -->
+
+	<head>
+
+	  <!-- =====Meta Config.===== -->
+		<meta charset="utf-8" name="viewport" content="width=device-width initial-scale= 1.0">
+		<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+		<meta name="description" content="Projeto">
+  	<meta name="author" content="YuriY">
+		<!-- =====Meta Config.===== -->
+
+	  <!-- =====Title Tab===== -->
+		<title>Teste</title>
+		<!-- =====Title Tab===== -->
+
+		<!-- =====CSS Import===== -->
+		<!-- =====CSS Import===== -->
+
+		<!-- =====CSS Inside===== -->
+		<style></style>
+		<!-- =====CSS Inside===== -->
+
+	</head>
+	<!-- =====Head===== -->
+
+	<!-- =====body===== -->
+	<body>
+
+		<main>	
+
+			<!--=====Code=====-->
+			<div id="main"></div>
+			<!--=====Code=====-->
+
+		</main>
+
+		<!-- =====Script Import===== -->
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react-dom.min.js'></script>
+<script src='https://unpkg.com/react-modal@1.6.2/dist/react-modal.min.js'></script><script  src="./script.js"></script>
+		<!-- =====Script Import===== -->
+		
+		<!-- =====Script Inside===== -->
+		<script>
+	ReactModal.defaultStyles.overlay.backgroundColor = 'cornsilk';
+
+class ExampleApp extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      showModal: false,
+      showModal2: false };
+
+
+    this.handleOpenModal = this.handleOpenModal.bind(this);
+    this.handleOpenModal2 = this.handleOpenModal2.bind(this);
+    this.handleCloseModal = this.handleCloseModal.bind(this);
+    this.handleCloseModal2 = this.handleCloseModal2.bind(this);
+  }
+
+  handleOpenModal() {
+    this.setState({ showModal: true });
+  }
+
+  handleOpenModal2() {
+    this.setState({ showModal2: true });
+  }
+
+  handleCloseModal() {
+    this.setState({ showModal: false });
+  }
+
+  handleCloseModal2() {
+    this.setState({ showModal2: false });
+  }
+
+  render() {
+    return /*#__PURE__*/(
+      React.createElement("div", null, /*#__PURE__*/
+      React.createElement("button", { onClick: this.handleOpenModal }, "Trigger #1 Modal"), /*#__PURE__*/
+      React.createElement("button", { onClick: this.handleOpenModal2 }, "Trigger #2 Modal"), /*#__PURE__*/
+      React.createElement(ReactModal, {
+        isOpen: this.state.showModal,
+        contentLabel: "Modal #1 Global Style Override Example",
+        onRequestClose: this.handleCloseModal }, /*#__PURE__*/
+
+      React.createElement("p", null, "Modal text!"), /*#__PURE__*/
+      React.createElement("button", { onClick: this.handleCloseModal }, "Close Modal")), /*#__PURE__*/
+
+      React.createElement(ReactModal, {
+        isOpen: this.state.showModal2,
+        contentLabel: "Modal #2 Global Style Override Example",
+        onRequestClose: this.handleCloseModal2 }, /*#__PURE__*/
+
+      React.createElement("p", null, "Modal #2 text!"), /*#__PURE__*/
+      React.createElement("button", { onClick: this.handleCloseModal2 }, "Close Modal"))));
+
+
+
+  }}
+
+
+const props = {};
+
+ReactDOM.render( /*#__PURE__*/React.createElement(ExampleApp, props), document.getElementById('main'));
+</script>
+		<!-- =====Script Inside===== -->
+
+	</body>
+	<!-- =====body===== -->
+
+</html>

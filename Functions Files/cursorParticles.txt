@@ -1,0 +1,97 @@
+<!--=====Este projeto o cursor do mouse fica com particulas=====-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<!--==========-->
+	<head>
+	  <!--=====Meta Config.=====-->
+		<meta charset="utf-8" name="viewport" content="width=device-width initial-scale= 1.0">
+		<meta name="description" content="Projeto">
+  	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  	<meta name="author" content="YuriY">
+		<!--=====End Meta Config.=====-->
+	  <!--=====Title Tab=====-->
+		<title>Teste</title>
+		<!--=====End Title Tab=====-->
+		<!--=====CSS Import=====-->
+		<!--=====End CSS Import=====-->
+		<!--=====CSS Inside=====-->
+		<style>
+		body, html, #app {
+  		margin: 0;
+			width: 100%;
+			height: 100%;
+		}
+		#app {
+			overflow: hidden;
+			touch-action: pan-up;
+			color: #ffffff;
+			font-family: 'Montserrat', sans-serif;
+			text-align: center;
+			text-shadow: 0 0 5px #ffffff, 0 0 20px #000, 0 0 30px #000;
+		}
+		#app h1 {
+			--fontSize: 60px;
+			--lineHeight: 80px;
+			width: auto;
+			height: calc(2 * var(--lineHeight));
+			line-height: var(--lineHeight);
+			margin: calc(50vh - var(--lineHeight)) auto 0;
+			font-size: var(--fontSize);
+			text-transform: uppercase;
+		}
+		#app a {
+			margin-top: 10px;
+			display: inline-block;
+			text-decoration: none;
+			color: #fff;
+		}
+		#app canvas {
+			display: block;
+			position: fixed;
+			z-index: -1;
+			top: 0;
+		}
+		</style>
+		<!--=====End CSS Inside=====-->
+	</head>
+<!--==========-->
+	<body>
+		<!--=====Main=====-->		
+		<main>	
+			<!--=====Code=====-->
+			<div id="app">
+				<div id="hero">
+					<h1>NEON<br/>CURSOR</h1>
+					<a target="_blank" href="https://github.com/klevron/threejs-toys">github/threejs-toys</a>
+				</div>
+			</div>
+			<!--=====End Code=====-->
+		</main>
+		<!--=====End Main=====-->
+		<!--=====Script Import=======-->
+		<script src="script.js"></script>
+		<!--=====End Script Import=====-->
+		<!--=====Script Inside=====-->
+		<script>
+		import { particlesCursor } from 'threejs-toys'
+		particlesCursor({
+			el: document.getElementById('app'),
+			gpgpuSize: 256,
+			colors: [0x00ff00, 0x0000ff],
+			color: 0xff0000,
+			coordScale: 1.5,
+			noiseIntensity: 0.001,
+			noiseTimeCoef: 0.0001,
+			pointSize: 5,
+			pointDecay: 0.005,
+			sleepRadiusX: 250,
+			sleepRadiusY: 250,
+			sleepTimeCoefX: 0.001,
+			sleepTimeCoefY: 0.002
+		})
+		</script>
+		<!--=====End Script Inside=====-->
+	</body>
+<!--==========-->
+</html>

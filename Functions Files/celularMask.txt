@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- =====Head===== -->
+
+	<head>
+
+	  <!-- =====Meta Config.===== -->
+		<meta charset="utf-8" name="viewport" content="width=device-width initial-scale= 1.0">
+		<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+		<meta name="description" content="Projeto">
+  	<meta name="author" content="YuriY">
+		<!-- =====Meta Config.===== -->
+
+	  <!-- =====Title Tab===== -->
+		<title>Teste</title>
+		<!-- =====Title Tab===== -->
+
+		<!-- =====CSS Import===== -->
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" rel="stylesheet">
+		<!-- =====CSS Import===== -->
+
+		<!-- =====CSS Inside===== -->
+		<style></style>
+		<!-- =====CSS Inside===== -->
+
+	</head>
+	<!-- =====Head===== -->
+
+	<!-- =====body===== -->
+	<body>
+
+		<main>	
+
+			<!--=====Code=====-->
+			<div>
+				<input type="text" name="telefone" required placeholder="Ex: (00) 00000-0000" id="celular" class="form-control" onkeypress="return maskCelular(event, this, '(##) #####-####')" minlength="15" maxlength="15">
+			</div>
+			<!--=====Code=====-->
+
+		</main>
+
+		<!-- =====Script Import===== -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.1.62/jquery.inputmask.bundle.js"></script>
+		<!-- =====Script Import===== -->
+		
+		<!-- =====Script Celular Formato===== -->
+		<script>
+		$(document).ready(function()
+		{
+		 var phones = [{ "mask": "(##) # ####-####"}];
+			$("#celular").inputmask({
+				mask: phones,
+				greedy: false,
+				definitions: { "#": { validator: "[0-9]", cardinality: 1}} });
+		});
+		</script>
+		<!-- =====Script Celular Formato===== -->
+
+	</body>
+	<!-- =====body===== -->
+
+</html>

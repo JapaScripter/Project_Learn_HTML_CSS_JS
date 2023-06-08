@@ -1,0 +1,58 @@
+<!--=====Este projeto utiliza um botão para aparecer uma frase e desaparecer a mesma ao apertar novamente=====-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<!--==========-->
+	<head>
+	  <!--=====Meta Config.=====-->
+		<meta charset="utf-8" name="viewport" content="width=device-width initial-scale= 1.0">
+		<meta name="description" content="Projeto">
+  	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  	<meta name="author" content="YuriY">
+		<!--=====End Meta Config.=====-->
+	  <!--=====Title Tab=====-->
+		<title>Teste</title>
+		<!--=====End Title Tab=====-->
+		<!--=====CSS Import=====-->
+		<!--=====End CSS Import=====-->
+		<!--=====CSS Inside=====-->
+		<style>
+		.text-btn {
+			display: none;
+		}
+		.show {
+			display: block;
+		}
+		</style>
+		<!--=====End CSS Inside=====-->
+	</head>
+<!--==========-->
+	<body>	
+		<!--=====Main=====-->		
+		<main>	
+			<!--=====Code=====-->
+			<section>
+				<button onclick="myFunction()">Hello</button>
+				<div id="hidden-text">Hello Moto!</div>
+			</section>
+			<!--=====End Code=====-->
+		</main>
+		<!--=====End Main=====-->
+		<!--=====Script Import=======-->
+		<script src="script.js"></script>
+		<!--=====End Script Import=====-->
+		<!--=====Script Inside=====-->
+		<script>
+			function myFunction() {
+			  var x = document.getElementById("hidden-text");
+			  if (x.style.display === "none") {
+			    x.style.display = "block";
+			  } else {
+			    x.style.display = "none";
+			  }
+			}
+		</script>
+		<!--=====End Script Inside=====-->
+	</body>
+<!--==========-->
+</html>

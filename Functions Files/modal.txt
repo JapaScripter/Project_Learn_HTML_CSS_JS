@@ -1,0 +1,105 @@
+<!--=====Este projeto é um modal que aparece na tela ao clicar=====-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<!--==========-->
+	<head>
+	  <!--=====Meta Config.=====-->
+		<meta charset="utf-8" name="viewport" content="width=device-width initial-scale= 1.0">
+		<meta name="description" content="Projeto">
+  	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  	<meta name="author" content="YuriY">
+		<!--=====End Meta Config.=====-->
+	  <!--=====Title Tab=====-->
+		<title>Teste</title>
+		<!--=====End Title Tab=====-->
+		<!--=====CSS Import=====-->
+		<!--=====End CSS Import=====-->
+		<!--=====CSS Inside=====-->
+		<style>
+		</style>
+		<!--=====End CSS Inside=====-->
+	</head>
+<!--==========-->
+	<body>
+		<!--=====Main=====-->		
+		<main>	
+			<!--=====Code=====-->
+			<label for="termosUso">
+				<h6>Li e aceito os <a type="button" class="" data-bs-toggle="modal" data-bs-target="#exampleModal">Termos deUso</a></h6>
+			</label>
+			<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">Termos de uso e politicas de privacidade do site Eu to limpo
+							</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body modal-dialog modal-dialog-scrollable">
+		
+							<p class="modaltermostext">As políticas de privacidade do site EU TO LIMPO tem como base o compromisso de
+								garantir a proteção dos dados e informações que coletamos, ou seja, seus Dados Pessoais, ser transparentes
+								sobre o uso que fazemos desses dados e oferecer privacidade e segurança no que tange à utilização do site
+								www.eutolimpo.com.br.
+								Dicionário de Definições:</p>
+							<p class="modaltermostext">Cookie: palavra em inglês que significa arquivo armazenado nos navegadores para
+								facilitar a
+								identificação destes. Muito utilizado pelos Sites para personalizar rotinas para cada Usuário.
+								Dados Pessoais: quaisquer dados que possam identificar uma pessoa.</p>
+							<p class="modaltermostext">IP: sigla para "Internet Protocol". É o protocolo que identifica, localiza e
+								estabelece conexão
+								entre computadores ligados à internet.</p>
+							<p class="modaltermostext">Site: conjunto de informações disponibilizadas na internet por indivíduo,
+								instituição, empresa
+								etc., pertencente a um mesmo endereço eletrônico e que geralmente trata de tema específico.</p>
+							<p class="modaltermostext">Usuários: são os clientes e os visitantes (pessoas físicas ou jurídicas) dos nossos
+								Sites.
+							<p class="modaltermostext">1. O EU TO LIMPO se preocupa com a segurança dos USUÁRIOS e PARCEIROS quando do
+								acesso ao portal, garantindo a proteção das informações pessoais de todos aqueles que o
+								acessam. Porém, o USUÁRIO deve estar ciente de que as medidas de segurança relativas à
+								internet não são integralmente infalíveis;</p>
+							<p class="modaltermostext">2. Com a aceitação da Política de Privacidade e Termos de Uso do site EU TO LIMPO,
+								o
+								USUÁRIO tem ciência e concorda que os seus dados pessoais, tais como nome, e-mail e
+								telefones, ou algum outro dado por nós solicitado, bem como incluído pelo USUÁRIO, mesmo
+								que por mera liberalidade, tornam-se de uso público para nós, cuja disponibilização a terceiros
+								dependerá de autorização livre e expressa deste, exceto nas hipóteses previstas em lei;</p>
+							<p class="modaltermostext">3. O USUÁRIO tem ciência que todos os registros de acesso e de dados pessoais
+								obedecem aos
+								direitos à privacidade, à proteção de dados e ao sigilo das comunicações, nos termos da
+								legislação vigente, portanto concorda e AUTORIZA que todos os dados pessoais
+								disponibilizados em seu cadastro, sejam recebidos, tratados e armazenados pelo EU TO
+								LIMPO, durante todo o período de relacionamento com o site, os quais serão excluídos
+								definitivamente a requerimento do próprio Usuário;</p>
+							<p class="modaltermostext">4. As informações serão recebidas pelo EU TO LIMPO, tratadas e armazenadas de forma
+								segura
+								e íntegra, em ambiente controlado e de segurança, respeitando o prazo legal de guarda, mesmo
+								após o término da relação mantida com o usuário do site;</p>
+							<p class="modaltermostext">5. O site EU TO LIMPO utiliza diferentes sistemas de tracking de terceiros, como
+								por exemplo,
+								Google Analytics, um serviço de análise de internet da Google Inc. O Google Analytics utiliza </p>
+		
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--=====End Code=====-->
+		</main>
+		<!--=====End Main=====-->
+		<!--=====Script Import=======-->
+		<script src="script.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" />
+		<!--=====End Script Import=====-->
+		<!--=====Script Inside=====-->
+		<script>
+		</script>
+		<!--=====End Script Inside=====-->
+	</body>
+<!--==========-->
+</html>

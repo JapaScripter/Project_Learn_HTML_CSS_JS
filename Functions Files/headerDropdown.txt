@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!--==========-->
+
+<head>
+	<!--=====* Template Name: Day - v4.10.0	* Template URL: https://bootstrapmade.com/day-multipurpose-html-template-for-free/ * Author: BootstrapMade.com	* License: https://bootstrapmade.com/license/=====-->
+	<!--=====Meta Config.=====-->
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta content="" name="description">
+	<meta content="" name="keywords">
+	<!--=====End Meta Config.=====-->
+	<!--=====Title Tab=====-->
+	<title>Grupo Roveri</title>
+	<!--=====End Title Tab=====-->
+	<!--=====Google Fonts=====-->
+	<link
+		href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+		rel="stylesheet">
+	<!--=====End Google Fonts=====-->
+	<!--=====Boxicons=====-->
+	<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+	<!--=====End Boxicons=====-->
+	<!--=====CSS Import Files=====-->
+	<link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<!--=====End CSS Import Files=====-->
+	<!--=====CSS Inside=====-->
+	<style>
+		/*=====General=====*/
+		body {
+			/*font*/
+			font-family: "Open Sans", sans-serif;
+			/*display*/
+			background: #FFFFFF;
+		}
+
+		section {
+			overflow: hidden;
+		}
+
+		/*=====General=====*/
+		/*=====Cabeçalho e Barra de Navegação=====*/
+		#cabecalho {
+			/*display*/
+			display: flex;
+			position: fixed;
+			width: 100%;
+			height: 70px;
+			align-items: center;
+			justify-content: center;
+			transition: all 0.3s;
+			z-index: 1000;
+			background: rgba(13, 13, 13, 1);
+		}
+
+		.cabecalho {
+			/*display*/
+			display: flex;
+			margin: 10px;
+			padding: 0;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.img-logo {
+			/*display*/
+			max-height: 50px;
+		}
+
+		.lista {
+			/*font*/
+			list-style: none;
+			/*display*/
+			display: flex;
+			margin: 0;
+			padding: 0;
+		}
+
+		.lista li a {
+			/*font*/
+			text-decoration: none;
+			font-weight: 50px;
+			font-size: 14px;
+			color: #ffffff;
+			/*display*/
+			padding: 10px;
+		}
+
+		.lista a:hover,
+		.lista .active,
+		.lista .active:focus,
+		.lista li:hover>a {
+			/*font*/
+			color: rgba(255, 255, 255, 0.6);
+		}
+
+		.lista li ul {
+			/*font*/
+			text-align: right;
+			/*display*/
+			display: none;
+			position: absolute;
+			width: 200px;
+			height: 150px;
+			top: 40px;
+			right: 18%;
+			padding: 20px;
+			background: #FE001A;
+			/*border*/
+			border-top: 5px solid #ffffff;
+			border-top-left-radius: 100%;
+			border-bottom-left-radius: 10px;
+		}
+
+		.lista li:hover ul,
+		.lista li.over ul {
+			/*font*/
+			list-style-type: none;
+			/*display*/
+			display: block;
+			margin: 10px 0;
+		}
+
+		.lista-content-main {
+			/*display*/
+			display: block;
+			position: absolute;
+			width: 200px;
+			height: 150px;
+			top: -5px;
+			left: 200px;
+			background: #0D0D0D url('/images/hero.jpeg') no-repeat center;
+			background-size: cover;
+			/*border*/
+			border-bottom: 5px solid #ffffff;
+			border-top-right-radius: 10px;
+			border-bottom-right-radius: 100%;
+		}
+
+		.lista-content-empresas {
+			/*display*/
+			display: none;
+		}
+
+		.lista-empresas:hover+.lista-content-empresas {
+			/*display*/
+			display: block;
+			position: absolute;
+			width: 200px;
+			height: 150px;
+			top: -5px;
+			left: 200px;
+			background: #0D0D0D url('/images/empresa.jpeg') no-repeat center;
+			background-size: cover;
+			/*border*/
+			border-bottom: 5px solid #ffffff;
+			border-top-right-radius: 10px;
+			border-bottom-right-radius: 100%;
+		}
+
+		.lista-content-servicos {
+			/*display*/
+			display: none;
+		}
+
+		.lista-servicos:hover+.lista-content-servicos {
+			/*display*/
+			display: block;
+			position: absolute;
+			width: 200px;
+			height: 150px;
+			top: -5px;
+			left: 200px;
+			background: #0D0D0D url('/images/servicos.jpg') no-repeat center;
+			background-size: cover;
+			/*border*/
+			border-bottom: 5px solid #ffffff;
+			border-top-right-radius: 10px;
+			border-bottom-right-radius: 100%;
+		}
+
+		.lista-content-dna {
+			/*display*/
+			display: none;
+		}
+
+		.lista-dna:hover+.lista-content-dna {
+			/*display*/
+			display: block;
+			position: absolute;
+			width: 200px;
+			height: 150px;
+			top: -5px;
+			left: 200px;
+			background: #0D0D0D url('/images/dna.jpg') no-repeat center;
+			background-size: cover;
+			/*border*/
+			border-bottom: 5px solid #ffffff;
+			border-top-right-radius: 10px;
+			border-bottom-right-radius: 100%;
+		}
+
+		.lista-content-trajetoria {
+			/*display*/
+			display: none;
+		}
+
+		.lista-trajetoria:hover+.lista-content-trajetoria {
+			/*display*/
+			display: block;
+			position: absolute;
+			width: 200px;
+			height: 150px;
+			top: -5px;
+			left: 200px;
+			background: #0D0D0D url('/images/trajetoria.jpg') no-repeat center;
+			background-size: cover;
+			/*border*/
+			border-bottom: 5px solid #ffffff;
+			border-top-right-radius: 10px;
+			border-bottom-right-radius: 100%;
+		}
+
+		/*=====End Cabeçalho e Barra de Navegação=====*/
+	</style>
+	<!--=====End CSS Inside=====-->
+</head>
+<!--==========-->
+
+<body>
+	<!--=====Header Import=====-->
+	<header id="cabecalho">
+		<nav class="cabecalho container">
+			<a href=""><img class="img-logo" src="./images/logo.png" alt="Logo Grupo Roveri"></a>
+			<ul id="lista" class="lista">
+				<li><a href="#hero"><i class='bx bxs-home-alt-2'></i></a></li>
+				<li><a href="#">Sobre Nós</a>
+					<ul>
+						<div class="lista-content-main"></div>
+						<li class="lista-empresas"><a href="#empresas">Empresas</a></li>
+						<div class="lista-content-empresas"></div>
+						<li class="lista-servicos"><a href="#servicos">Serviços</a></li>
+						<div class="lista-content-servicos"></div>
+						<li class="lista-dna"><a href="#dna">DNA Empresarial</a></li>
+						<div class="lista-content-dna"></div>
+						<li class="lista-trajetoria"><a href="#trajetoria">Nossa Trajetória</a></li>
+						<div class="lista-content-trajetoria"></div>
+					</ul>
+				</li>
+				<li><a href="#sociais">Fale Conosco</a></li>
+			</ul>
+		</nav>
+	</header>
+	<!--=====End Header Import=====-->
+	<!--=====Main=====-->
+	<main id="main">
+	</main>
+	<!--=====End Main=====-->
+	<script>
+		/*=====Script Scroll Header e BacKToTop=====*/
+
+		window.onscroll = function () {scrollFunction()};
+		function scrollFunction() {
+			if (document.documentElement.scrollTop < 1) {
+				document.getElementById("cabecalho").style.background = "none";
+				document.getElementById("backToTop").style.visibility = "hidden";
+			} else {
+				document.getElementById("cabecalho").style.background = "#0D0D0D";
+				document.getElementById("backToTop").style.visibility = "visible";
+			}
+		}
+		window.onload = scrollFunction;
+
+		/*=====Script Scroll Header e BacKToTop=====*/
+	</script>
+</body>
+<!--==========-->
+
+</html>

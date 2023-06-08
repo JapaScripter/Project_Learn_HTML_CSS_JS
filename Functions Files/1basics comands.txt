@@ -1,0 +1,102 @@
+/*==========
+Formas de Printrar
+==========*/
+window.alert ou alert(); Escreve um pop-up;
+document.write(); Escreve página escrita com o resultado como HTML;
+innerHTML(); Escreve sobre um elemento do HTML;
+console.log(); Escreve no console;
+
+/*==========
+Pop-up de mensagem
+==========*/
+window.alert ('Minha primeira mensagem!');
+
+/*==========
+Pop-up de Confirmação
+==========*/
+window.confirm ('Está gostando de JS?');
+
+/*==========
+Pop-up de Inclusão de Dados
+==========*/
+window.prompt ('Qual é o seu nome?');
+
+/*==========
+Pop-up de Inclusão de Dados
+==========*/
+var nome = window.prompt ('Qual é o seu nome?');
+window.alert ('É um grande prazer te conhecer ' + nome + '!');
+
+/*==========
+Pop-up de Soma e Conversão de Números
+==========*/
+var n1 = Number.parseInt (window.prompt ('Digite um número: '));
+var n2 = Number.parseFloat(window.prompt ('Digite outro número: '));
+var n3 = Number (window.prompt ('Digite mais um número: '));
+var soma = n1 + n2 + n3;
+window.alert ('A soma dos valores é: ' + soma);
+
+/*==========
+Pop-up de Soma e Conversão de Números
+==========*/
+var n1 = Number.parseInt (window.prompt ('Digite um número: '));
+var n2 = Number.parseFloat(window.prompt ('Digite outro número: '));
+var n3 = Number (window.prompt ('Digite mais um número: '));
+var soma = n1 + n2 + n3;
+window.alert ('A soma dos valores é: ' + soma);
+
+/*==========
+Inclusão de Template Strings com Place Holder ${} com `crase`
+==========*/
+var nome = window.prompt('Qual é o seu nome?');
+document.write(`Olá ${nome}! Seu nome tem ${nome.length} letras. <br>`);
+document.write(`Seu nome em maiúculas fica ${nome.toUpperCase()}. <br>`);
+document.write(`Seu nome em minúsculas fica ${nome.toLowerCase()}. <br>`);
+
+/*==========
+Inclusão de Formatação de Números
+==========*/
+var n1 = 1545.987654321;
+document.write(`${n1.toFixed(2)} <br>`);
+document.write(`${n1.toFixed(4).replace('.', ',')} <br>`);
+document.write(`${n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} <br>`);
+document.write(`${n1.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})} <br>`);
+document.write(`${n1.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'})} <br>`);
+
+/*==========
+Operadores de Aritméticos
+==========*/
+var a = 5 + 2;
+var b = 5 - 2;
+var c = 5 * 2;
+var d = 5 / 2;
+var e = 5 % 2;
+var f = 5 ** 2;
+document.write('5 + 2 = ', a);
+document.write('<br> 5 - 2 = ', b);
+document.write('<br> 5 * 2 = ', c);
+document.write('<br> 5 / 2 = ', d);
+document.write('<br> 5 % 2 = ', e);
+document.write('<br> 5 ** 2 = ', f);
+
+/*==========
+Operadores de Incremento
+==========*/
+var x = 5;
+x = x + 1; // = 6
+x = x - 1; // = 5
+x += 1; // = 6
+x -= 1; // = 5
+x ++; // = 6
+x --; // = 5
+
+/*==========
+Operadores Relacionais
+==========*/
+var x = 5
+x < 1 ; // = false
+x > 1 ; // = true
+x >= 1; // = true
+x <= 1; // = false
+x == 1; // = false
+x != 1; // = true

@@ -1,0 +1,61 @@
+<!--=====Este projeto é um navbar com linkagem de multiplas páginas=====-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<!--==========-->
+	<head>
+	  <!--=====Meta Config.=====-->
+		<meta charset="utf-8" name="viewport" content="width=device-width initial-scale= 1.0">
+		<meta name="description" content="Projeto">
+  	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  	<meta name="author" content="YuriY">
+		<!--=====End Meta Config.=====-->
+	  <!--=====Title Tab=====-->
+		<title>Teste</title>
+		<!--=====End Title Tab=====-->
+		<!--=====CSS Import=====-->
+		<!--=====End CSS Import=====-->
+		<!--=====CSS Inside=====-->
+		<style>
+		</style>
+		<!--=====End CSS Inside=====-->
+	</head>
+<!--==========-->
+	<body>
+		<!--=====Main=====-->		
+		<main>	
+			<!--=====Code=====-->
+			<a href="#" onclick="return show('Page1','Page2','Page3','Page4');">Show page 1</a>
+			<a href="#" onclick="return show('Page2','Page3','Page4','Page1');">Show page 2</a>
+			<a href="#" onclick="return show('Page3','Page4','Page1','Page2');">Show page 3</a>
+			<a href="#" onclick="return show('Page4','Page1','Page2','Page3');">Show page 4</a>
+			<div id="Page1">
+				Content of page 1
+			</div>
+			<div id="Page2" style="display:none">
+				Content of page 2
+			</div>
+			<div id="Page3" style="display:none">
+				Content of page 3
+			</div>
+			<div id="Page4" style="display:none">
+				Content of page 4
+			</div>
+			<!--=====End Code=====-->
+		</main>
+		<!--=====End Main=====-->		
+		<!--=====Script Import=======-->
+		<script src="script.js"></script>
+		<!--=====End Script Import=====-->
+		<!--=====Script Inside=====-->
+		<script>
+		function show(shown, hidden) {
+			document.getElementById(shown).style.display='block';
+			document.getElementById(hidden).style.display='none';
+			return false;
+		}
+		</script>
+		<!--=====End Script Inside=====-->
+	</body>
+<!--==========-->
+</html>

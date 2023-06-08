@@ -1,0 +1,60 @@
+<!--=====Este projeto é um Input de Dados=====-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<!--==========-->
+	<head>
+	  <!--=====Meta Config.=====-->
+		<meta charset="utf-8" name="viewport" content="width=device-width initial-scale= 1.0">
+		<meta name="description" content="Projeto">
+  	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  	<meta name="author" content="YuriY">
+		<!--=====End Meta Config.=====-->
+	  <!--=====Title Tab=====-->
+		<title>Teste</title>
+		<!--=====End Title Tab=====-->
+		<!--=====CSS Import=====-->
+		<!--=====End CSS Import=====-->
+		<!--=====CSS Inside=====-->
+		<style>
+		</style>
+		<!--=====End CSS Inside=====-->
+	</head>
+<!--==========-->
+	<body>
+		<!--=====Main=====-->		
+		<main>	
+			<!--=====Code=====-->
+			<form id="formulario" name="" method="" action="">
+				<p>
+					<h2 id="titulo-form">Dados do Livro</h2>
+				</p>
+				<p><label for="nome">Nome do Autor:</label>
+					<input type="text" name="nome" id="nome" maxlength="80" /></p>
+				<p><label for="sobre">Sobrenome do Autor:</label>
+					<input type="text" name="sobre" id="sobre" maxlength="80" /></p>
+				<p><label for="titulo">Título:</label>
+					<input type="text" name="titulo" id="titulo" maxlength="80" /></p>
+				<button type="submit">Enviar</button>
+			</form>
+			<!--=====End Code=====-->
+		</main>
+		<!--=====End Main=====-->
+		<!--=====Script Import=======-->
+		<script src="script.js"></script>
+		<!--=====End Script Import=====-->
+		<!--=====Script Inside=====-->
+		<script>
+		const form = document.getElementById('formulario');
+		form.addEventListener('submit', function(e) {
+			e.preventDefault();
+			const [sobre, nome, titulo] = ['sobre', 'nome', 'titulo'].map(
+				name => form.querySelector(`[name="${name}"]`).value
+			);
+			document.write(`${sobre}, ${nome} - ${titulo}`);
+		});
+		</script>
+		<!--=====End Script Inside=====-->
+	</body>
+<!--==========-->
+</html>
